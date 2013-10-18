@@ -28,7 +28,7 @@ public class ProxyCliente {
     public void empaquetarDatos() {
         XStream xStream = new XStream(new DomDriver());
         mensaje = xStream.toXML(candidato);
-        System.out.println("Xml " + mensaje);
+        System.out.println(mensaje);
         
     }
     /**Método que traducirá lo recibido en una clase*/

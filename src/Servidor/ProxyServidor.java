@@ -32,7 +32,7 @@ public class ProxyServidor {
         mensajeRecibido = xStream.toXML(mensaje);
        
 //        Error de la conversión de xml a clase
-         System.out.println((Candidato)xStream.fromXML(mensajeRecibido));
+         System.out.println((Candidato)xStream.fromXML(mensajeRecibido.substring(1)));
 //        (Candidato)xStream.fromXML(mensajeRecibido);
 
 
