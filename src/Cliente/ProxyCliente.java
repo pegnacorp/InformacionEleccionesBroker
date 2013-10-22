@@ -26,7 +26,6 @@ public class ProxyCliente {
         this.candidato = candidato;
 
     }
-
     /**
      * Método que traducirá lo enviado en un xml
      */
