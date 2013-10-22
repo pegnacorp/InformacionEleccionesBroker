@@ -24,10 +24,10 @@ public class ServidorTCP {
         try {
             System.out.println("recibido");
             Socket conexionSocket = welcomeSocket.accept();
-            BufferedReader entradaServidor = new BufferedReader(new InputStreamReader(conexionSocket.getInputStream()));
-            while((mensajeRecibido = entradaServidor.readLine()) != null){
-                System.out.println(mensajeRecibido);
-            }
+//            BufferedReader entradaServidor = new BufferedReader(new InputStreamReader(conexionSocket.getInputStream(),"UTF-8"));
+           DataInputStream recibido = new DataInputStream(conexionSocket.getInputStream());
+           mensajeRecibido = recibido.readUTF();
+            System.out.println(mensajeRecibido);
             
             
         } catch (Exception excepcion) {
